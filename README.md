@@ -30,7 +30,7 @@ docker run \
 -e ROLE_ID="DISCORD_ROLE_ID_BOT_RESPONDS_TO" \
 -e OPENAI_MODEL="MODEL_NAME" \
 -v /path/to/your/system_message.txt:/openai-discord-chatbot/system_message.txt \
-sauramello/openai-discord-chatbot
+sauramello/openai-discord-chatbot #still need to build
 ```
 
 2b. **Use Docker Compose**:
@@ -42,6 +42,7 @@ services:
         container_name: openai-discord
         environment:
             - DISCORD_BOT_TOKEN= #Your Discord bot's token (see: https://discord.com/developers/applications)
+            - OPENAI_API_BASE="http://localhost:11434/v1"
             - OPENAI_API_KEY= #Your secret API key (see: https://platform.openai.com/account/api-keys)
             - MAX_CACHE= #Number of messages to remember for context
             - COOLDOWN_TIME= #Seconds to wait until the bot responds
