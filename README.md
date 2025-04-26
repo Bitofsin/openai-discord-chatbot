@@ -23,6 +23,7 @@ This project enables you to deploy a Discord bot powered by OpenAI's GPT-3.5 mod
 ```bash
 docker run \
 -e DISCORD_BOT_TOKEN="YOUR_DISCORD_BOT_TOKEN" \
+-e OPENAI_API_BASE="http://localhost:11434/v1" \
 -e OPENAI_API_KEY="YOUR_OPENAI_API_TOKEN" \
 -e MAX_CACHE=NUMBER_OF_MESSAGES_TO_REMEMBER \
 -e COOLDOWN_TIME=SECONDS_TO_WAIT_BEFORE_RESPONDING \
